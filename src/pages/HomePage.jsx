@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [successMessage, setSuccessMessage] = useState(null);
@@ -40,16 +41,8 @@ function HomePage() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/ideas">
-                  All Ideas
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/ideas/create">
-                  New Idea
-                </a>
-              </li>
+            <Link to="/" className="nav-link">All Ideas</Link>
+            <Link to="/ideas/create" className="nav-link">New Idea</Link>
             </ul>
           </div>
         </div>
